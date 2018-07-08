@@ -7,5 +7,6 @@ target 'chatTalk' do
 
   # Pods for chatTalk
 pod 'Firebase/Core'
+pod 'Firebase/Database'
 
 end
