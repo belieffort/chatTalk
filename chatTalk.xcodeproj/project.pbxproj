@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2864A1367231585411F2A4C0 /* Pods_chatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58EFBCD347F9E20D4CF4082 /* Pods_chatTalk.framework */; };
 		721F533420F25C5C0000682A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F533320F25C5C0000682A /* AppDelegate.swift */; };
 		721F533620F25C5C0000682A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F533520F25C5C0000682A /* ViewController.swift */; };
 		721F533920F25C5C0000682A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721F533720F25C5C0000682A /* Main.storyboard */; };
 		721F533B20F25C5E0000682A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721F533A20F25C5E0000682A /* Assets.xcassets */; };
 		721F533E20F25C5E0000682A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721F533C20F25C5E0000682A /* LaunchScreen.storyboard */; };
+		721F534620F25D660000682A /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 721F534520F25D660000682A /* GoogleService-Info-2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A503E3C0B52C6B01FC13BCA /* Pods-chatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		721F533020F25C5C0000682A /* chatTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		721F533320F25C5C0000682A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		721F533520F25C5C0000682A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		721F533A20F25C5E0000682A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		721F533D20F25C5E0000682A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		721F533F20F25C5E0000682A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		721F534520F25D660000682A /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		C6853B19050292AA2DFD87DC /* Pods-chatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk.release.xcconfig"; sourceTree = "<group>"; };
+		E58EFBCD347F9E20D4CF4082 /* Pods_chatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2864A1367231585411F2A4C0 /* Pods_chatTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D75B9F11D7253D5A4A67975 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A503E3C0B52C6B01FC13BCA /* Pods-chatTalk.debug.xcconfig */,
+				C6853B19050292AA2DFD87DC /* Pods-chatTalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		46173370B289FAF5B0953B1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E58EFBCD347F9E20D4CF4082 /* Pods_chatTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		721F532720F25C5C0000682A = {
 			isa = PBXGroup;
 			children = (
 				721F533220F25C5C0000682A /* chatTalk */,
 				721F533120F25C5C0000682A /* Products */,
+				2D75B9F11D7253D5A4A67975 /* Pods */,
+				46173370B289FAF5B0953B1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				721F533A20F25C5E0000682A /* Assets.xcassets */,
 				721F533C20F25C5E0000682A /* LaunchScreen.storyboard */,
 				721F533F20F25C5E0000682A /* Info.plist */,
+				721F534520F25D660000682A /* GoogleService-Info-2.plist */,
 			);
 			path = chatTalk;
 			sourceTree = "<group>";
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 721F534220F25C5E0000682A /* Build configuration list for PBXNativeTarget "chatTalk" */;
 			buildPhases = (
+				612FDEA1DE2B5873E2F720C4 /* [CP] Check Pods Manifest.lock */,
 				721F532C20F25C5C0000682A /* Sources */,
 				721F532D20F25C5C0000682A /* Frameworks */,
 				721F532E20F25C5C0000682A /* Resources */,
+				AD5AE5439AC89381702D356D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,11 +153,53 @@
 			files = (
 				721F533E20F25C5E0000682A /* LaunchScreen.storyboard in Resources */,
 				721F533B20F25C5E0000682A /* Assets.xcassets in Resources */,
+				721F534620F25D660000682A /* GoogleService-Info-2.plist in Resources */,
 				721F533920F25C5C0000682A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		612FDEA1DE2B5873E2F720C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chatTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD5AE5439AC89381702D356D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		721F532C20F25C5C0000682A /* Sources */ = {
@@ -278,6 +349,7 @@
 		};
 		721F534320F25C5E0000682A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A503E3C0B52C6B01FC13BCA /* Pods-chatTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +367,7 @@
 		};
 		721F534420F25C5E0000682A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6853B19050292AA2DFD87DC /* Pods-chatTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
