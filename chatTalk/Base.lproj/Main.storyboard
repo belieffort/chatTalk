@@ -17,19 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwz-92-SA1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwz-92-SA1">
                                 <rect key="frame" x="0.0" y="611" width="375" height="56"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DET-ZG-gAd">
-                                        <rect key="frame" x="4" y="6" width="304" height="43"/>
+                                        <rect key="frame" x="4" y="6" width="304" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="43" id="2ZN-lv-GPz"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orl-LJ-qBg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orl-LJ-qBg">
                                         <rect key="frame" x="325" y="13" width="36" height="30"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,21 +38,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="orl-LJ-qBg" firstAttribute="leading" secondItem="DET-ZG-gAd" secondAttribute="trailing" constant="17" id="3w3-sz-xXz"/>
-                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="centerY" secondItem="orl-LJ-qBg" secondAttribute="centerY" id="BAD-8E-8hi"/>
-                                    <constraint firstAttribute="trailing" secondItem="orl-LJ-qBg" secondAttribute="trailing" constant="14" id="SD7-L0-ic8"/>
-                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="centerY" secondItem="Jwz-92-SA1" secondAttribute="centerY" id="fJH-NW-3DB"/>
-                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="top" secondItem="Jwz-92-SA1" secondAttribute="top" constant="6" id="jah-Pp-nAB"/>
-                                    <constraint firstItem="orl-LJ-qBg" firstAttribute="top" secondItem="Jwz-92-SA1" secondAttribute="top" constant="13" id="p5u-tF-JI4"/>
-                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="leading" secondItem="Jwz-92-SA1" secondAttribute="leading" constant="4" id="u0I-bd-8i2"/>
+                                    <constraint firstItem="orl-LJ-qBg" firstAttribute="leading" secondItem="DET-ZG-gAd" secondAttribute="trailing" constant="17" id="5fa-zw-iLI"/>
+                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="leading" secondItem="Jwz-92-SA1" secondAttribute="leading" constant="4" id="Ero-0G-0Fl"/>
+                                    <constraint firstAttribute="trailing" secondItem="orl-LJ-qBg" secondAttribute="trailing" constant="14" id="IBM-Th-Ajg"/>
+                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="top" secondItem="Jwz-92-SA1" secondAttribute="top" constant="6" id="KXJ-Pp-Fg5"/>
+                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="centerY" secondItem="Jwz-92-SA1" secondAttribute="centerY" id="QoK-C7-eCF"/>
+                                    <constraint firstItem="DET-ZG-gAd" firstAttribute="centerY" secondItem="orl-LJ-qBg" secondAttribute="centerY" id="W8T-dp-I4w"/>
+                                    <constraint firstItem="orl-LJ-qBg" firstAttribute="top" secondItem="Jwz-92-SA1" secondAttribute="top" constant="13" id="exf-pT-mn5"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-cd-aTX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="608" id="dSF-82-z70"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="pOn-V4-FZc" style="IBUITableViewCellStyleDefault" id="pdN-lp-2lR">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -83,12 +77,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jwz-92-SA1" firstAttribute="top" secondItem="dZA-cd-aTX" secondAttribute="bottom" constant="3" id="7z3-dK-C7U"/>
-                            <constraint firstItem="dZA-cd-aTX" firstAttribute="trailing" secondItem="Jwz-92-SA1" secondAttribute="trailing" id="IAL-Uj-xGu"/>
-                            <constraint firstItem="dZA-cd-aTX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="McX-9u-g3S"/>
-                            <constraint firstItem="dZA-cd-aTX" firstAttribute="leading" secondItem="Jwz-92-SA1" secondAttribute="leading" id="W0W-X3-m5E"/>
-                            <constraint firstItem="dZA-cd-aTX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dkz-Ab-KNd"/>
-                            <constraint firstAttribute="trailing" secondItem="dZA-cd-aTX" secondAttribute="trailing" id="fn5-FF-TKf"/>
+                            <constraint firstItem="Jwz-92-SA1" firstAttribute="top" secondItem="dZA-cd-aTX" secondAttribute="bottom" constant="8" symbolic="YES" id="7Dp-tu-OUw"/>
+                            <constraint firstItem="dZA-cd-aTX" firstAttribute="leading" secondItem="Jwz-92-SA1" secondAttribute="leading" id="I1b-PA-bDX"/>
+                            <constraint firstAttribute="trailing" secondItem="dZA-cd-aTX" secondAttribute="trailing" id="Nam-aE-5dn"/>
+                            <constraint firstItem="dZA-cd-aTX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RfP-nM-CtT"/>
+                            <constraint firstItem="Jwz-92-SA1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a9y-y3-GBW"/>
+                            <constraint firstItem="dZA-cd-aTX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eQv-hx-hnR"/>
+                            <constraint firstItem="dZA-cd-aTX" firstAttribute="trailing" secondItem="Jwz-92-SA1" secondAttribute="trailing" id="ehN-rh-o9P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

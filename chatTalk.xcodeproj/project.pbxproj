@@ -13,7 +13,7 @@
 		721F533920F25C5C0000682A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721F533720F25C5C0000682A /* Main.storyboard */; };
 		721F533B20F25C5E0000682A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721F533A20F25C5E0000682A /* Assets.xcassets */; };
 		721F533E20F25C5E0000682A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721F533C20F25C5E0000682A /* LaunchScreen.storyboard */; };
-		721F534620F25D660000682A /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 721F534520F25D660000682A /* GoogleService-Info-2.plist */; };
+		721F534C20F26C570000682A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 721F534B20F26C570000682A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		721F533A20F25C5E0000682A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		721F533D20F25C5E0000682A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		721F533F20F25C5E0000682A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		721F534520F25D660000682A /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		721F534B20F26C570000682A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6853B19050292AA2DFD87DC /* Pods-chatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		E58EFBCD347F9E20D4CF4082 /* Pods_chatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,13 +80,13 @@
 		721F533220F25C5C0000682A /* chatTalk */ = {
 			isa = PBXGroup;
 			children = (
+				721F534B20F26C570000682A /* GoogleService-Info.plist */,
 				721F533320F25C5C0000682A /* AppDelegate.swift */,
 				721F533520F25C5C0000682A /* ViewController.swift */,
 				721F533720F25C5C0000682A /* Main.storyboard */,
 				721F533A20F25C5E0000682A /* Assets.xcassets */,
 				721F533C20F25C5E0000682A /* LaunchScreen.storyboard */,
 				721F533F20F25C5E0000682A /* Info.plist */,
-				721F534520F25D660000682A /* GoogleService-Info-2.plist */,
 			);
 			path = chatTalk;
 			sourceTree = "<group>";
@@ -152,8 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				721F533E20F25C5E0000682A /* LaunchScreen.storyboard in Resources */,
+				721F534C20F26C570000682A /* GoogleService-Info.plist in Resources */,
 				721F533B20F25C5E0000682A /* Assets.xcassets in Resources */,
-				721F534620F25D660000682A /* GoogleService-Info-2.plist in Resources */,
 				721F533920F25C5C0000682A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
