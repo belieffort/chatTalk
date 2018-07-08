@@ -14,6 +14,7 @@
 		721F533B20F25C5E0000682A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721F533A20F25C5E0000682A /* Assets.xcassets */; };
 		721F533E20F25C5E0000682A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721F533C20F25C5E0000682A /* LaunchScreen.storyboard */; };
 		721F534C20F26C570000682A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 721F534B20F26C570000682A /* GoogleService-Info.plist */; };
+		721F534E20F2720A0000682A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F534D20F2720A0000682A /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		721F533D20F25C5E0000682A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		721F533F20F25C5E0000682A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		721F534B20F26C570000682A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		721F534D20F2720A0000682A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C6853B19050292AA2DFD87DC /* Pods-chatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		E58EFBCD347F9E20D4CF4082 /* Pods_chatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				721F533A20F25C5E0000682A /* Assets.xcassets */,
 				721F533C20F25C5E0000682A /* LaunchScreen.storyboard */,
 				721F533F20F25C5E0000682A /* Info.plist */,
+				721F534D20F2720A0000682A /* AuthViewController.swift */,
 			);
 			path = chatTalk;
 			sourceTree = "<group>";
@@ -186,12 +189,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -209,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				721F533620F25C5C0000682A /* ViewController.swift in Sources */,
+				721F534E20F2720A0000682A /* AuthViewController.swift in Sources */,
 				721F533420F25C5C0000682A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

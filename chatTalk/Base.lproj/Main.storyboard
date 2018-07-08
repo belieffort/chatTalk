@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MF5-Lx-InX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,109 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="XIA-TV-v8f">
+            <objects>
+                <viewController id="fRy-yd-isl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fe1-pa-YOW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChatTalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz8-ep-aRA">
+                                <rect key="frame" x="0.0" y="184" width="375" height="37"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="31"/>
+                                <color key="textColor" red="0.67844148522667602" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTC-C2-6kP">
+                                <rect key="frame" x="161" y="317" width="53" height="30"/>
+                                <state key="normal" title="회원가입">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8qi-nl-ig8" kind="show" identifier="SignupSegue" id="l7g-PO-uXM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1W-eB-yu7">
+                                <rect key="frame" x="167" y="349" width="41" height="30"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8qi-nl-ig8" kind="show" identifier="LoginSegue" id="Cvp-la-z41"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q1W-eB-yu7" firstAttribute="leading" secondItem="zLi-NH-z93" secondAttribute="leading" constant="167" id="HmD-ct-kSF"/>
+                            <constraint firstItem="GTC-C2-6kP" firstAttribute="top" secondItem="Uz8-ep-aRA" secondAttribute="bottom" constant="96" id="IGf-O4-J8Y"/>
+                            <constraint firstItem="GTC-C2-6kP" firstAttribute="centerX" secondItem="q1W-eB-yu7" secondAttribute="centerX" id="OdX-yF-QeD"/>
+                            <constraint firstItem="GTC-C2-6kP" firstAttribute="leading" secondItem="zLi-NH-z93" secondAttribute="leading" constant="161" id="Ty8-Ng-UEs"/>
+                            <constraint firstItem="Uz8-ep-aRA" firstAttribute="top" secondItem="zLi-NH-z93" secondAttribute="top" constant="120" id="bZ2-kC-qla"/>
+                            <constraint firstItem="Uz8-ep-aRA" firstAttribute="centerX" secondItem="GTC-C2-6kP" secondAttribute="centerX" id="hYY-2U-YuO"/>
+                            <constraint firstItem="Uz8-ep-aRA" firstAttribute="leading" secondItem="zLi-NH-z93" secondAttribute="leading" id="keJ-DM-4SK"/>
+                            <constraint firstItem="q1W-eB-yu7" firstAttribute="top" secondItem="GTC-C2-6kP" secondAttribute="bottom" constant="2" id="m6r-dj-1od"/>
+                            <constraint firstItem="Uz8-ep-aRA" firstAttribute="centerX" secondItem="fe1-pa-YOW" secondAttribute="centerX" id="ptp-SA-LtD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zLi-NH-z93"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Do6-0e-yzp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTf-j4-Yj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.5" y="-595.5"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="P5K-JW-fIR">
+            <objects>
+                <viewController id="8qi-nl-ig8" customClass="AuthViewController" customModule="chatTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OdI-gj-UkL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-QS-lbR">
+                                <rect key="frame" x="16" y="278" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vo-ai-opc">
+                                <rect key="frame" x="16" y="333" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKO-bP-Ysv">
+                                <rect key="frame" x="16" y="396" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="가입하기"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="8qi-nl-ig8" eventType="touchUpInside" id="zhR-uj-jWa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-fq-fly">
+                                <rect key="frame" x="16" y="119" width="104" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zSl-BV-Xi5"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="gYc-QS-lbR" id="qlj-Lt-hbP"/>
+                        <outlet property="passwordTextField" destination="9vo-ai-opc" id="f3Z-hU-ryl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Mt-bU-4aU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940" y="-595.05247376311854"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -96,5 +199,26 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="119.1904047976012"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bfs-WT-GhL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MF5-Lx-InX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vy2-Vf-aNs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fRy-yd-isl" kind="relationship" relationship="rootViewController" id="odU-n5-YK9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kI-NL-gyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-595.05247376311854"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cvp-la-z41"/>
+    </inferredMetricsTieBreakers>
 </document>
