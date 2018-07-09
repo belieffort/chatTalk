@@ -106,11 +106,53 @@
                     <connections>
                         <outlet property="emailTextField" destination="gYc-QS-lbR" id="qlj-Lt-hbP"/>
                         <outlet property="passwordTextField" destination="9vo-ai-opc" id="f3Z-hU-ryl"/>
+                        <segue destination="iFQ-YV-gOO" kind="show" identifier="ToMain" id="sc2-0P-yGz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Mt-bU-4aU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1940" y="-595.05247376311854"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Naw-0s-cIH">
+            <objects>
+                <viewController id="iFQ-YV-gOO" customClass="MainViewController" customModule="chatTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X39-kJ-k0w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSM-IT-kzH">
+                                <rect key="frame" x="0.0" y="304" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-7O-UiI">
+                                <rect key="frame" x="161" y="333" width="52" height="30"/>
+                                <state key="normal" title="로그아웃"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="iFQ-YV-gOO" eventType="touchUpInside" id="rh5-nk-xGU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w6Y-7O-UiI" firstAttribute="top" secondItem="vSM-IT-kzH" secondAttribute="bottom" constant="8" symbolic="YES" id="1iX-oM-dH9"/>
+                            <constraint firstItem="vSM-IT-kzH" firstAttribute="leading" secondItem="X39-kJ-k0w" secondAttribute="leading" id="QHK-JW-jPu"/>
+                            <constraint firstItem="vSM-IT-kzH" firstAttribute="top" secondItem="b7M-oG-6Kq" secondAttribute="top" constant="240" id="Rdc-7V-uC6"/>
+                            <constraint firstItem="w6Y-7O-UiI" firstAttribute="leading" secondItem="b7M-oG-6Kq" secondAttribute="leading" constant="161" id="ler-xi-ZWu"/>
+                            <constraint firstItem="vSM-IT-kzH" firstAttribute="centerX" secondItem="w6Y-7O-UiI" secondAttribute="centerX" id="ojl-Xl-yVj"/>
+                            <constraint firstAttribute="trailing" secondItem="vSM-IT-kzH" secondAttribute="trailing" id="xjM-u9-uME"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b7M-oG-6Kq"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="vSM-IT-kzH" id="MXL-1J-RHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKf-qr-tmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2736.8000000000002" y="-596.85157421289364"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

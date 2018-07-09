@@ -20,11 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var _refHandle: DatabaseHandle?
 
     
-    
     @IBAction func sendButtonPressed(_ sender: Any) {
         var mdata = [String:String]()
         mdata["text"] = chatTextView.text
-
         
         // Push data to Firebase Database
         self.ref.child("messages").childByAutoId().setValue(mdata)

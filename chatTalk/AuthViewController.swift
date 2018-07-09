@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
     @IBAction func buttonPressed(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: nil)
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            if (error == nil) {
+                self.performSegue(withIdentifier: "ToMain", sender: sender)
+            }
+        })
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
