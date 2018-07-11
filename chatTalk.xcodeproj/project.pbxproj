@@ -16,6 +16,7 @@
 		721F534C20F26C570000682A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 721F534B20F26C570000682A /* GoogleService-Info.plist */; };
 		721F534E20F2720A0000682A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F534D20F2720A0000682A /* AuthViewController.swift */; };
 		721F535020F27B940000682A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F534F20F27B940000682A /* MainViewController.swift */; };
+		721F535220F332D30000682A /* PreAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F535120F332D30000682A /* PreAuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		721F534B20F26C570000682A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		721F534D20F2720A0000682A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		721F534F20F27B940000682A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		721F535120F332D30000682A /* PreAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreAuthViewController.swift; sourceTree = "<group>"; };
 		C6853B19050292AA2DFD87DC /* Pods-chatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-chatTalk/Pods-chatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		E58EFBCD347F9E20D4CF4082 /* Pods_chatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,8 +93,9 @@
 				721F533C20F25C5E0000682A /* LaunchScreen.storyboard */,
 				721F533F20F25C5E0000682A /* Info.plist */,
 				721F533520F25C5C0000682A /* ViewController.swift */,
-				721F534D20F2720A0000682A /* AuthViewController.swift */,
 				721F534F20F27B940000682A /* MainViewController.swift */,
+				721F534D20F2720A0000682A /* AuthViewController.swift */,
+				721F535120F332D30000682A /* PreAuthViewController.swift */,
 			);
 			path = chatTalk;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				721F533620F25C5C0000682A /* ViewController.swift in Sources */,
+				721F535220F332D30000682A /* PreAuthViewController.swift in Sources */,
 				721F534E20F2720A0000682A /* AuthViewController.swift in Sources */,
 				721F533420F25C5C0000682A /* AppDelegate.swift in Sources */,
 				721F535020F27B940000682A /* MainViewController.swift in Sources */,

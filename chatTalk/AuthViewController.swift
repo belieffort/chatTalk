@@ -14,19 +14,42 @@ class AuthViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var isLogin:Bool?
+    var ref: DatabaseReference!
+
     
     @IBAction func buttonPressed(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
-            if (error == nil) {
-                self.performSegue(withIdentifier: "ToMain", sender: sender)
-            }
-        })
+        
+        if isLogin! {
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (_, error) in
+                if (error == nil) {
+                    self.performSegue(withIdentifier: "ToMain", sender: sender)
+                }
+            })
+        }else {
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+                if (error == nil) {
+                    self.performSegue(withIdentifier: "ToMain", sender: sender)
+//                    let mdata = [
+//                        user!.user.uid : ["email" : user!.user.email]
+//
+//                    ]
+//                    self.ref.child("users").childByAutoId().setValue(mdata)
+                    let mdata = ["email" : user!.user.email]
+                    self.ref.child("users/\(user!.user.uid)").setValue(mdata)
+
+
+
+                }
+            })
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+
     }
     
 
