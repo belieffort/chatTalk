@@ -37,9 +37,6 @@ class AuthViewController: UIViewController {
 //                    self.ref.child("users").childByAutoId().setValue(mdata)
                     let mdata = ["email" : user!.user.email]
                     self.ref.child("users/\(user!.user.uid)").setValue(mdata)
-
-
-
                 }
             })
         }

@@ -19,13 +19,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var messages: [DataSnapshot]! = []
     var _refHandle: DatabaseHandle?
 
+    var targetEmail:String?
+    var targetUID:String?
     
     @IBAction func sendButtonPressed(_ sender: Any) {
         var mdata = [String:String]()
         mdata["text"] = chatTextView.text
-        
+        mdata["sender"] = Auth.auth().currentUser!.uid
+        mdata["receiver"] = targetUID
         // Push data to Firebase Database
         self.ref.child("messages").childByAutoId().setValue(mdata)
+        chatTextView.text = nil
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +43,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Unpack message from Firebase DataSnapshot
         let messageSnapshot: DataSnapshot! = self.messages[indexPath.row]
         guard let message = messageSnapshot.value as? [String:String] else { return cell }
-        let text = message["text"] ?? "[text]"
+        let sender = message["sender"]
+        var text = "[text]"
+        if sender == targetUID {
+            text = "\(targetEmail!) : \(message["text"]!)"
+        } else {
+            text = "Me : \(message["text"]!)"
+        }
+        
+
         cell.textLabel?.text = text
         return cell
     }
@@ -64,8 +76,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            .queryEqual(toValue: "Sleep tight")
             .observe(.childAdded, with: { [weak self] (snapshot) -> Void in
             guard let strongSelf = self else { return }
-            strongSelf.messages.append(snapshot)
-            strongSelf.chatTableView.insertRows(at: [IndexPath(row: strongSelf.messages.count-1, section: 0)], with: .automatic)
+                
+            let messageSnapshot: DataSnapshot! = snapshot
+            guard let message = messageSnapshot.value as? [String:String] else { return }
+//            let text = message["text"] ?? "[text]"
+                let sender = message["sender"]
+                let receiver = message["receiver"]
+                if (sender == strongSelf.targetUID || sender == Auth.auth().currentUser!.uid) && (receiver == strongSelf.targetUID || receiver == Auth.auth().currentUser!.uid) {
+                    strongSelf.messages.append(snapshot)
+                    strongSelf.chatTableView.insertRows(at: [IndexPath(row: strongSelf.messages.count-1, section: 0)], with: .automatic)
+                    }
+            
         })
     }
 
